@@ -1,0 +1,46 @@
+@use '../helpers/colors';
+.featuers{
+    padding: 20px 0 40px;
+    .masterHeading{
+        width: fit-content;
+        margin: auto{
+            bottom: 20px;
+        };
+        font-weight: bolder;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap:20px;
+        .card{
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.5s;
+            &:hover{
+                transform: scale(1.1);
+            }
+            img{
+                width: 25%;
+                margin: auto;
+            }
+            hr{
+                width: 30px;
+                margin: auto;
+                height: 4px;
+                background-color: var(--main-color);
+                margin-bottom: 10px;
+                opacity: 1;
+                outline: none;
+                border: none;
+            }
+            h4{
+                margin: 10px 0;
+                position: relative;
+            }
+            p{
+                opacity: .7;
+            }
+        }
+    }
+}

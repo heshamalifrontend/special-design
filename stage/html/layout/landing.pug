@@ -1,0 +1,21 @@
+include ../componats/helpers
+.landing 
+    .overflow
+    header.header 
+        .container
+            .logo 
+                h5 #{pageTitle}
+            ul.nav__link
+                each link in links 
+                    li: a(href="#" + link)=link
+            .nav__toggle
+                span
+                span
+                span
+    .landing__info 
+        .parentHead 
+            h1 we 
+            h1 are
+            h1.active creative
+            h1 agency
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste

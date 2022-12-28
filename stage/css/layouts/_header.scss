@@ -1,0 +1,95 @@
+@use '../helpers/mixin';
+@use '../helpers/colors';
+header{
+    position: relative;
+    height: 60px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+        @include mixin.phone{
+            padding: 10px;
+        }
+        .logo{
+            h5{
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+        }
+        ul{
+            display: flex;
+            margin-top: 5px;
+            align-items: center;
+            @include mixin.phone{
+                display: none;
+            }
+            li{
+                &:not(:last-child){
+                    margin-right: 5px;
+                }
+                a{
+                    display: inline-block;
+                    padding: 10px;
+                    color: white;
+                    &:hover{
+                        color:var(--main-color) !important;
+                    }
+                }
+            }
+            &.active{
+                position: absolute;
+                top: 65px;
+                left: 5%;
+                background-color: white;
+                display: block;
+                width: 90%;
+                height: fit-content;
+                z-index: 9999;
+                // text-align: center;
+                border-radius: 10px;
+                li{
+                    // margin-bottom: 20px;
+                    margin: 0;
+                    a{
+                        color: var(--main-color);
+                        display: block;
+                        // border: 1px solid red;
+                        padding: 4px 0;
+                    }
+                }
+            }
+        }
+        .nav__toggle{
+            height: fit-content;
+            width: 30px;
+            transition: all .5s;
+            display:none;
+            cursor: pointer;
+            @include mixin.phone{
+                display: block;
+            }
+            &:hover{
+                span{
+                    &:nth-child(2){
+                        width: 100%;
+                    }
+                }
+            }
+            span{
+                width: 100%;
+                height: 3px;
+                display: block;
+                background-color: white;
+                &:not(:last-child){
+                    margin-bottom:5px;
+                }
+                &:nth-child(2){
+                    width: 50%;
+                    
+                }
+            }
+        }
+    }
+}

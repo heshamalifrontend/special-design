@@ -1,0 +1,134 @@
+@use '../helpers/mixin';
+@use '../helpers/colors';
+.timeline{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE; 
+    .clearfix {
+        clear: both;
+    }
+    .timeline-content{
+        position: relative;
+        overflow: hidden;
+        &::before{
+            content: '';
+            width: 2px;
+            height: 100%;
+            background-color: var(--main-color);
+            position: absolute;
+            left: 50%;
+            margin-left: -1px;
+            top: 0;
+        }
+        .year{
+            margin: 20px auto;
+            width: 50px;
+            background-color: var(--main-color);
+            position: relative;
+            z-index: 2;
+            border-radius: 4px;
+            text-align: center;
+            color: #FFF;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+        .right{
+            float: right;
+            width: calc(50% - 25px);
+            margin-bottom: 40px;
+            position: relative;
+            @include mixin.phone{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .content{
+                &::before{
+                    content: '';
+                    border-style: solid;
+                    border-width: 10px;
+                    border-color: transparent #FFF transparent transparent ;
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    left: -20px;
+                    top: 20px;
+                    @include mixin.phone{
+                        display: none;
+                    }
+                }
+            }
+            &::before{
+                content: '';
+                width: 16px;
+                height: 16px;
+                background-color: #fff;
+                border: 3px solid var(--main-color);
+                position: absolute;
+                border-radius: 50%;
+                top: 20px;
+                left: -33px;
+                @include mixin.phone{
+                    display: none;
+                }
+            }
+        }
+        .left{
+            float: left;
+            width: calc(50% - 25px);
+            margin-bottom: 40px;
+            position: relative;
+            @include mixin.phone{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .content{
+                &::before{
+                    content: '';
+                    border-style: solid;
+                    border-width: 10px;
+                    border-color: transparent transparent transparent #FFF;
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    right: -20px;
+                    top: 20px;
+                    @include mixin.phone{
+                        display: none;
+                    }
+                }
+            }
+            &::before{
+                content: "";
+                width: 16px;
+                height: 16px;
+                background-color: #fff;
+                border: 3px solid var(--main-color);
+                position: absolute;
+                border-radius: 50%;
+                top: 20px;
+                right: -33px;
+                @include mixin.phone{
+                    display: none;
+                }
+            }
+        }
+        .content{
+            padding: 20px;
+            background-color: #FFF;
+            p{
+                color: #666;
+                margin: 0;
+                line-height: 1.6;
+            }
+            h3{
+                font-weight: bold;
+                color: var(--main-color);
+                margin: 0 0 10px;
+            }
+        }
+    }
+}
+
+
+
+

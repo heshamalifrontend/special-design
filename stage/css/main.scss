@@ -1,0 +1,15 @@
+@use 'helpers/colors'; 
+@use 'helpers/mixin' as *;
+@use 'helpers/glopals';
+@use 'layouts/header';
+@use 'layouts/landing';
+@use 'layouts/about';
+@use 'layouts/skills';
+@use 'layouts/slider';
+@use 'layouts/timeLine';
+@use 'layouts/features';
+@use 'layouts/contact';
+@use 'layouts/footer';
+@use 'layouts/test'; 
+@use 'options/bullets'; 
+@use 'options/settings'; 

@@ -1,0 +1,26 @@
+@use '../helpers/mixin';
+.about{
+    position: relative;
+    .container{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include mixin.phone{
+            flex-direction: column;
+            text-align: center;
+        }
+        .about__info{
+            h1{
+                font-weight: bolder;
+            }
+            p{
+            }
+        }
+        .about__pic{
+            img{
+    
+            }
+        }
+    }
+}

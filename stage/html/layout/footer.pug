@@ -1,0 +1,9 @@
+include ../componats/helpers
+footer.footer
+    .container 
+        ul 
+            each link in links 
+                li: a(href="#" + link)=link
+        hr
+        p © 2021 Company, designed by 
+        span hesham

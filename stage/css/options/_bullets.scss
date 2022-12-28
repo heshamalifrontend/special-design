@@ -1,0 +1,49 @@
+@use '../helpers/colors';
+.bullets{
+    position: fixed;
+    right: 0;
+    width: fit-content;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 39999;
+    color: white;
+    ul{
+        text-align:center;
+        a{
+            border:3px solid var(--main-color);
+            width: 20px;
+            height: 20px;
+            display: block;
+            border-radius: 50%;
+            margin-top: 10px;
+            position: relative;
+            transform: translateX(-10px);
+            &:hover{
+                li{
+                    display: block;
+                }
+            }
+            li{
+                position: absolute;
+                display: none;
+                left: -30;
+                transform: translate(-120px,-2px);
+                top: 0;
+                background-color: var(--main-color);
+                width: 108px;
+                font-size: 14px;
+                padding: 1px 20px;
+                color: #fff;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    right: -20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: 12px solid;
+                    border-color: transparent transparent transparent var(--main-color);
+                }
+            }
+        }
+    }
+}

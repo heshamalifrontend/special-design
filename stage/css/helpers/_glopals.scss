@@ -1,0 +1,62 @@
+@use './colors';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.bodyoverflow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(#000, .8);
+    z-index: 9999;
+    width: 0%;
+    height: 100%;
+    display: none;
+    transition: all .5s;
+    &.active{
+        display: block;
+        animation: overflow .5s forwards linear;
+    }
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+a{
+    text-decoration: none !important;
+}
+ul{
+    list-style: none;
+}
+
+
+// start contact label
+
+.form-label{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+// end contact label
+
+
+@keyframes overflow{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.masterHeading{
+    color: var(--main-color);
+}

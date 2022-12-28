@@ -1,0 +1,22 @@
+include ../componats/helpers
+.settings 
+    .gear 
+        i.fa-solid.fa-gear
+    .container 
+        section.option.options-color
+            p colors 
+            ul 
+                each color in colors 
+                    li(data-color=color).main-option
+        section.yesORno.option.options-background
+            p random backgrounds
+            ul 
+                li: button.active.btn yes
+                li: button.btn no
+        section.yesORno.option.options-bullets
+            p show bullets
+            ul 
+                li: button.active.btn yes
+                li: button.btn no
+        button.btn.reset reset options
+

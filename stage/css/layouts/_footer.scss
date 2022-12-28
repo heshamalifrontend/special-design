@@ -1,0 +1,40 @@
+.footer{
+    position: relative;
+    padding: 30px 0;
+    background-color: #252525;
+    .container{
+        text-align: center;
+        ul{
+            display: flex;
+            width: fit-content;
+            margin: auto;
+            gap: 10px;
+            flex-wrap: wrap;
+            li{
+                // &:not(:last-child){
+                //     margin-right: 10px;
+                // }
+                a{
+                    color: white;
+                    opacity: .6;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        hr{
+            color: #fff;
+        }
+        p{
+            color: #fff;
+            opacity: .6;
+        }
+        span{
+            color: #fff;
+            opacity: 1;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    }
+}
